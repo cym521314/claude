@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "chrome": {
+      "command": "node",
+      "args": ["C:/Users/cym-yyds/.claude/skills/superpowers-chrome/mcp-server.js"],
+      "cwd": "C:/Users/cym-yyds/.claude/skills/superpowers-chrome",
+      "env": {},
+      "disabled": false
+    }
+  }
+}
