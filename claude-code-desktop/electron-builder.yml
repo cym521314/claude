@@ -1,0 +1,41 @@
+# ============================================================
+# electron-builder.yml — Electron 打包配置文件
+# 用于生成 Windows 安装包（便携版、安装器等）
+# ============================================================
+
+# 应用基本信息
+appId: com.claude-code-desktop.app           # 唯一应用标识符
+productName: Claude Code Desktop             # 应用显示名称
+copyright: Copyright © 2025                    # 版权信息
+
+# 打包的文件范围
+files:
+  - dist/**/*                                # 所有编译后的代码
+  - package.json                             # 包配置文件
+
+# 排除的文件
+extraFiles: []                               # 额外需要打包的文件（暂无）
+
+# Windows 平台特定配置
+win:
+  target:
+    - target: portable                       # 便携版（绿色版，无需安装）
+      arch:
+        - x64                                # 仅 64 位架构
+    # - target: nsis                         # NSIS 安装包（可选）
+    #   arch:
+    #     - x64
+  icon: public/icon.png                      # 应用图标路径
+
+# macOS 平台配置（预留）
+mac:
+  category: public.app-category.developer-tools
+
+# Linux 平台配置（预留）
+linux:
+  category: Development
+
+# 自动更新配置（预留，后续可使用 electron-updater）
+# publish:
+#   provider: generic
+#   url: https://example.com/auto-updates
